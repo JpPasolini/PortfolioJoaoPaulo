@@ -316,4 +316,25 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("%c👋 Olá, desenvolvedor curioso!", "font-size: 20px; font-weight: bold; color: #3b82f6;")
   console.log("%cGostou do portfólio? Vamos trabalhar juntos!", "font-size: 14px; color: #64748b;")
   console.log("%cContato: pasolinijp@gmail.com", "font-size: 14px; color: #64748b;")
+
+// ===================================
+  // Botão Voltar ao Topo
+  // ===================================
+
+  const backToTopBtn = document.getElementById("backToTopBtn")
+
+  if (backToTopBtn) {
+    window.addEventListener("scroll", () => {
+      // Mostra o botão se o usuário rolou mais de 300 pixels
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("visible")
+      } else {
+        backToTopBtn.classList.remove("visible")
+      }
+    })
+    
+    // A rolagem suave já é tratada pelo seu código existente de nav-links,
+    // então não precisamos adicionar um evento de clique aqui. O href="#home" já funciona.
+  }
+
 }) // End of DOMContentLoaded wrapper

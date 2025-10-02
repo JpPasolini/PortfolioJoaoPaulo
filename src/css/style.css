@@ -1125,3 +1125,103 @@ img {
   }
 }
 
+/* ===================================
+   Melhoria: Efeitos de Elevação
+   =================================== */
+
+.project-card,
+.hero-social a,
+.stat-card,
+.contact-card,
+.timeline-content,
+.skill-category,
+.feature-item,
+.tech-tag,
+.project-link,
+.btn {
+  /* Adiciona uma transição suave para o movimento e a sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.hero-social a:hover,
+.stat-card:hover,
+.contact-card:hover,
+.timeline-content:hover,
+.skill-category:hover,
+.feature-item:hover,
+.tech-tag:hover,
+.project-link:hover,
+.btn:hover {
+  /* Move o elemento 5 pixels para cima */
+  transform: translateY(-5px);
+  /* Aumenta a sombra para dar a impressão de que "flutuou" */
+  box-shadow: var(--shadow-lg);
+}
+
+/* Ajuste específico para o botão primário manter sua sombra original mais forte */
+.btn-primary:hover {
+    box-shadow: 0 6px 20px 0 rgba(59, 130, 246, 0.5);
+}
+
+/* ===================================
+   Melhoria: Barra de Rolagem
+   =================================== */
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 10px;
+  border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* ===================================
+   Melhoria: Botão Voltar ao Topo
+   =================================== */
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background: var(--gradient-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  
+  /* Começa escondido */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  /* Classe que o JavaScript vai adicionar para mostrar o botão */
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.6);
+  transform: translateY(-2px); /* Efeito de elevação extra no hover */
+}
