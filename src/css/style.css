@@ -1,9 +1,4 @@
-/* ===================================
-   Modern Portfolio 2025 - CSS
-   =================================== */
-
 :root {
-  /* Colors - Light Theme */
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --bg-tertiary: #f1f5f9;
@@ -35,10 +30,6 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
 }
-
-/* ===================================
-   Reset & Base
-   =================================== */
 
 *,
 *::before,
@@ -80,20 +71,12 @@ img {
   display: block;
 }
 
-/* ===================================
-   Container
-   =================================== */
-
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
-
-/* ===================================
-   Navigation
-   =================================== */
 
 .navbar {
   position: fixed;
@@ -217,10 +200,6 @@ img {
   background-color: var(--text-primary);
   transition: all 0.3s ease;
 }
-
-/* ===================================
-   Hero Section
-   =================================== */
 
 .hero {
   min-height: 100vh;
@@ -439,10 +418,6 @@ img {
   }
 }
 
-/* ===================================
-   Section Styles
-   =================================== */
-
 .section {
   padding: 6rem 0;
 }
@@ -482,10 +457,6 @@ img {
   color: var(--text-secondary);
   line-height: 1.8;
 }
-
-/* ===================================
-   About Section
-   =================================== */
 
 .about-grid {
   display: grid;
@@ -593,10 +564,6 @@ img {
   font-weight: 500;
 }
 
-/* ===================================
-   Timeline (Experience)
-   =================================== */
-
 .timeline {
   position: relative;
   max-width: 900px;
@@ -674,10 +641,6 @@ img {
   color: var(--text-secondary);
   line-height: 1.7;
 }
-
-/* ===================================
-   Skills Section
-   =================================== */
 
 .skills-grid {
   display: grid;
@@ -786,10 +749,6 @@ img {
   transform: translateY(-2px);
 }
 
-/* ===================================
-   Projects Section
-   =================================== */
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -885,10 +844,6 @@ img {
   color: white;
 }
 
-/* ===================================
-   Contact Section
-   =================================== */
-
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -945,10 +900,6 @@ img {
   color: var(--text-primary);
 }
 
-/* ===================================
-   Footer
-   =================================== */
-
 .footer {
   padding: 3rem 0;
   background-color: var(--bg-secondary);
@@ -983,10 +934,6 @@ img {
   color: var(--accent-primary);
 }
 
-/* ===================================
-   Animations
-   =================================== */
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1019,10 +966,6 @@ img {
     transform: translateX(0);
   }
 }
-
-/* ===================================
-   Responsive Design
-   =================================== */
 
 @media (max-width: 1024px) {
   .hero-content {
@@ -1126,10 +1069,6 @@ img {
   }
 }
 
-/* ===================================
-   Melhoria: Efeitos de Elevação
-   =================================== */
-
 .project-card,
 .hero-social a,
 .stat-card,
@@ -1140,7 +1079,6 @@ img {
 .tech-tag,
 .project-link,
 .btn {
-  /* Adiciona uma transição suave para o movimento e a sombra */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1154,22 +1092,15 @@ img {
 .tech-tag:hover,
 .project-link:hover,
 .btn:hover {
-  /* Move o elemento 5 pixels para cima */
   transform: translateY(-5px);
-  /* Aumenta a sombra para dar a impressão de que "flutuou" */
+
   box-shadow: var(--shadow-lg);
 }
 
-/* Ajuste específico para o botão primário manter sua sombra original mais forte */
 .btn-primary:hover {
   box-shadow: 0 6px 20px 0 rgba(59, 130, 246, 0.5);
 }
 
-/* ===================================
-   Melhoria: Barra de Rolagem
-   =================================== */
-
-/* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -1188,10 +1119,6 @@ img {
   background: var(--accent-hover);
 }
 
-/* ===================================
-   Melhoria: Botão Voltar ao Topo
-   =================================== */
-
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -1206,7 +1133,6 @@ img {
   border-radius: 50%;
   box-shadow: var(--shadow-md);
 
-  /* Começa escondido */
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
@@ -1216,7 +1142,6 @@ img {
 }
 
 .back-to-top.visible {
-  /* Classe que o JavaScript vai adicionar para mostrar o botão */
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -1224,16 +1149,12 @@ img {
 
 .back-to-top:hover {
   box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.6);
-  transform: translateY(-2px); /* Efeito de elevação extra no hover */
+  transform: translateY(-2px);
 }
-
-/* ===================================
-   Estilo Ícones do Rodapé
-   =================================== */
 
 .footer-links {
   display: flex;
-  gap: 1.5rem; /* Aumenta o espaço entre os ícones */
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -1244,5 +1165,5 @@ img {
 
 .footer-links a:hover {
   color: var(--accent-primary);
-  transform: translateY(-3px); /* Efeito de elevação que já temos */
+  transform: translateY(-3px);
 }
